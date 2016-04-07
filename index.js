@@ -95,6 +95,7 @@ var gulpSass = function gulpSass(options, sync) {
 
       file.contents = sassObj.css;
       file.path = gutil.replaceExtension(file.path, '.css');
+      file.sass_stats = sassObj.stats;
 
       cb(null, file);
     };
